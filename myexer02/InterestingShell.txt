@@ -1,0 +1,76 @@
+lynx -dump https://www.redhat.com/sysadmin/linux-skills-home-lab
+
+curl --insecure -vvI https://www.nseindia.com/api/equity-stockIndices?index=NIFTY%2050
+
+curl --cacert certRepo -X GET -H 'Content-Type: application/json' "https://www.nseindia.com//market-data/live-equity-market"
+
+openssl s_client -connect www.nseindia.com:443 </dev/null 2>/dev/null | openssl x509 -inform pem -out nsecert.pem -text
+
+vlc "f:\tmp\x.wmv" -I dummy -vvv --sout="#transcode{vcodec=none,acodec=mp3,ab=128,channels=2,samplerate=44100}:std{access=file,mux=dummy,dst='F:\tmp\x.mp3'}" vlc://quit
+
+cat why_i_decided_toVim | nc termbin.com 9999
+
+#includes sed & sort
+ls -ltr | sed "s/[aei]/u/g"|sort|grep uct
+
+which and whereis
+
+xkill, killall are the newest 
+
+cal, date 
+
+source ~/.bashrc (without closing the bash terminal)
+
+sudo systemctl status ufw
+
+^status^stop ==> sudo systemctl stop ufw
+   curl --config auth.cfg
+curl --config auth.cfg  | lynx -stdin -dump -width=100
+wget -m http://www.example.com 2>&1 | grep '^--' | awk '{ print  }' | grep -v '\.\(css\|js\|png\|gif\|jpg\|JPG\)$' > urls.txt
+pacman -Qqe > installedPackages.txt
+pamac list -i : lists all the installed programs in Linux
+ls | sed 's/solverbot/SBOT/' :Make sure to have a closing /
+starting cut & tr
+STDIN 0 STDOUT 1 STDERR 2
+cat <0 .bashrc 1> /dev/stdout
+ls | tee homedir
+ls > nwfile && cat nwfile
+used in vim for root previlege w sudo pacman -S alacritty tee %
+used in vim for root previlege w/run/media/solverbot/repoA/gitFolders/botoPersonal/shellscripting/InterestingShell.txt tee %
+used in vim for root previlege w^! tee %
+echo 1 | sudo tee /proc/sys/kernel/sysrq
+echo 0
+test $var1 = 26 note the gap between number and =
+if test 77 -gt  then ... fi
+if test 77 =/ !=/ -ge / -le / -lt  then ... fi
+test -z value return (0) if value is 0 length, that is empty. Remember in Shell 0 is true
+if [ 77 -lt 266 ]; then echo that value is large; fi
+case has case, in, esac, ), ;;, | and wildcard parameters to remember
+break and continue can be used to control any statement, not just the while loop
+break will terminate the loop execution and continue after the loop
+continue will stop the current loop and retest the loop condition and if required do the loop
+Bash has no idea called number only through expr the calculation can be done
+something to think about 3 \* 4
+5/57 ==> this command will error out saying no such directory. use 0
+The text processing tools are filter command in bash that takes stdin or file contents, processes it and outputs some data
+The filters used are cat, more, grep, sort, wc, tee, sed, awk
+sed '/bash/d' testfile will remove line with bash in testfile
+cat sortWrite.sh | sed '/\[/d removing the lines that are testing
+awk -F : '{print ,(+)/)}'
+in function parameter  represents all parameters
+function can return info by stdout or exit status. Function output is sent to screen and other programm, file or stored in variable
+return statement terminates current function, while the exit statement terminates the shell and the user is left at the login screen. Know the difference
+function from another file can be imported using the '.' like so . /home/yuue/libs/scrip1
+The 0 is number of parameters given
+shift command pops the awk_command_history.txt value and moves every other parameter one step higher, and frees up encDecrypt.sh
+IFS is Internal field seperator
+bash cannot be shifted
+ : is a linux command that returns 0
+ set -- `who | grep fred` sets the current bash instance $1 and $2 terms
+seq 1 10 | xargs -I {} touch file_{}.txt
+reality in terminal
+using curl to download: curl -o ubuntu.iso http://location/of/iso
+get data from server using curl : curl -I http://google.com
+to get handshake data : curl -v http://google.com
+cat<<EOF means end of file, the file recvs the signal
+cat<<EOF > filename opens up EOF of the file for further writing the data. Then the file can be closed using EOF

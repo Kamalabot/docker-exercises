@@ -1,0 +1,3 @@
+successfully copied the local file into docker and then executed cat command on it.
+After that got the bash shell from docker by running it using 'docker run -it --rm -name yourname image:latest bash'
+important is how we build the docker image. Using the docker build -t image:latest . Note there is no any -f flag as the docker file is in the same context
