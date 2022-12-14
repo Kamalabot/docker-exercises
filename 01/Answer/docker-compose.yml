@@ -1,7 +1,7 @@
 version: '2.1'
 services:
     db:
-        image: mongo:3
+        image: mongo
         container_name: db
 
     web:
